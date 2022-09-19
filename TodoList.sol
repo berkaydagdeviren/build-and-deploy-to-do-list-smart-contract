@@ -26,10 +26,10 @@ contract TodoList {
 
     //get todo function
     function getTodo(uint index) external view returns(string memory, bool) {
-        Todo storage todo = todos[index];
+        Todo storage todo = todos[index]; 
         return (todo.text, todo.completed);
     }
-
+    // Toggle completed for todos
     function toggleCompleted(uint index) external {
         todos[index].completed = !todos[index].completed;
     }
